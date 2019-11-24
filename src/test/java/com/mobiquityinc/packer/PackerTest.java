@@ -40,20 +40,20 @@ public class PackerTest {
 	public void shouldReturnOneThingToBePackagedBetweenMany() throws APIException {
 		String expectedResult = "4\n"; 
 		String result = Packer.pack("oneThing2bePackagedBetweenMany.txt");
-		Assert.assertEquals("theres no things to be packaged",result, expectedResult);
+		Assert.assertEquals("The expected thing was packaged",result, expectedResult);
 	}	
 	
 	@Test
 	public void shouldReturnOneThingForFirstPackegeButNoThingForSecondPackage() throws APIException {
 		String expectedResult = "4\n-\n"; 
 		String result = Packer.pack("twoThings2bePackaged.txt");
-		Assert.assertEquals("theres no things to be packaged",result, expectedResult);
+		Assert.assertEquals("The expected thing was packaged",result, expectedResult);
 	}
 	
 	@Test
 	public void shouldReturnThingsForEachPackage() throws APIException {
 		String expectedResult = "4\n-\n2,7\n8,9\n"; 
 		String result = Packer.pack("things2bePackaged2.txt");
-		Assert.assertEquals("theres no things to be packaged",result, expectedResult);
+		Assert.assertEquals("The expected thing was packaged",result, expectedResult);
 	}
 }
